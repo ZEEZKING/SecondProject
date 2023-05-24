@@ -1,0 +1,30 @@
+C:\Users\Harzeez\Desktop\NewProject\bin\Debug\net6.0\NewProject.exe
+C:\Users\Harzeez\Desktop\NewProject\bin\Debug\net6.0\NewProject.deps.json
+C:\Users\Harzeez\Desktop\NewProject\bin\Debug\net6.0\NewProject.runtimeconfig.json
+C:\Users\Harzeez\Desktop\NewProject\bin\Debug\net6.0\NewProject.dll
+C:\Users\Harzeez\Desktop\NewProject\bin\Debug\net6.0\ref\NewProject.dll
+C:\Users\Harzeez\Desktop\NewProject\bin\Debug\net6.0\NewProject.pdb
+C:\Users\Harzeez\Desktop\NewProject\obj\Debug\net6.0\NewProject.csproj.AssemblyReference.cache
+C:\Users\Harzeez\Desktop\NewProject\obj\Debug\net6.0\NewProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Harzeez\Desktop\NewProject\obj\Debug\net6.0\NewProject.AssemblyInfoInputs.cache
+C:\Users\Harzeez\Desktop\NewProject\obj\Debug\net6.0\NewProject.AssemblyInfo.cs
+C:\Users\Harzeez\Desktop\NewProject\obj\Debug\net6.0\NewProject.csproj.CoreCompileInputs.cache
+C:\Users\Harzeez\Desktop\NewProject\obj\Debug\net6.0\NewProject.dll
+C:\Users\Harzeez\Desktop\NewProject\obj\Debug\net6.0\ref\NewProject.dll
+C:\Users\Harzeez\Desktop\NewProject\obj\Debug\net6.0\NewProject.pdb
+C:\Users\Harzeez\Desktop\NewProject\obj\Debug\net6.0\NewProject.genruntimeconfig.cache
+C:\Users\Harzeez\Desktop\New project\bin\Debug\net6.0\NewProject.exe
+C:\Users\Harzeez\Desktop\New project\bin\Debug\net6.0\NewProject.deps.json
+C:\Users\Harzeez\Desktop\New project\bin\Debug\net6.0\NewProject.runtimeconfig.json
+C:\Users\Harzeez\Desktop\New project\bin\Debug\net6.0\NewProject.dll
+C:\Users\Harzeez\Desktop\New project\bin\Debug\net6.0\ref\NewProject.dll
+C:\Users\Harzeez\Desktop\New project\bin\Debug\net6.0\NewProject.pdb
+C:\Users\Harzeez\Desktop\New project\obj\Debug\net6.0\NewProject.csproj.AssemblyReference.cache
+C:\Users\Harzeez\Desktop\New project\obj\Debug\net6.0\NewProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Harzeez\Desktop\New project\obj\Debug\net6.0\NewProject.AssemblyInfoInputs.cache
+C:\Users\Harzeez\Desktop\New project\obj\Debug\net6.0\NewProject.AssemblyInfo.cs
+C:\Users\Harzeez\Desktop\New project\obj\Debug\net6.0\NewProject.csproj.CoreCompileInputs.cache
+C:\Users\Harzeez\Desktop\New project\obj\Debug\net6.0\NewProject.dll
+C:\Users\Harzeez\Desktop\New project\obj\Debug\net6.0\ref\NewProject.dll
+C:\Users\Harzeez\Desktop\New project\obj\Debug\net6.0\NewProject.pdb
+C:\Users\Harzeez\Desktop\New project\obj\Debug\net6.0\NewProject.genruntimeconfig.cache
