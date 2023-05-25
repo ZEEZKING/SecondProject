@@ -14,32 +14,46 @@ namespace NewProject.Menu
         IBookingManager _bookingManager = new BookingManager();
         public void CustomerMain()
         {
-            System.Console.WriteLine("Enter 1 to fund your Wallet\nEnter 2 to check wallet \nEnter 3 to view all rooms \nEnter 4 to book ");
-            int input = int.Parse(Console.ReadLine());
-            switch (input)
+            try
             {
-                case 1:
-                    FundWallet();
-                    CustomerMain();
-                    break;
-                case 2:
-                    CheckWallet();
-                    CustomerMain();
-                    break;
-                case 3:
-                    ViewRooms();
-                    CustomerMain();
-                    break;
-                case 4:
-                    BookingMenu bookingMenu = new BookingMenu();
-                    bookingMenu.BookingMain();
-                    break;
-                default:
-                    System.Console.WriteLine("Invalid input");
-                    CustomerMain();
-                    break;
+                System.Console.WriteLine("Enter 1 to fund your Wallet\nEnter 2 to check wallet \nEnter 3 to view all rooms \nEnter 4 to book ");
+                int input = int.Parse(Console.ReadLine());
+                switch (input)
+                {
+                    case 1:
+                        FundWallet();
+                        CustomerMain();
+                        break;
+                    case 2:
+                        CheckWallet();
+                        CustomerMain();
+                        break;
+                    case 3:
+                        ViewRooms();
+                        CustomerMain();
+                        break;
+                    case 4:
+                        BookingMenu bookingMenu = new BookingMenu();
+                        bookingMenu.BookingMain();
+                        break;
+                    default:
+                        System.Console.WriteLine("Invalid input");
+                        CustomerMain();
+                        break;
 
+                }
             }
+           catch (NullReferenceException e)
+            {
+                System.Console.WriteLine(e.Message);
+                  CustomerMain();
+            }
+            catch(FormatException e)
+            {
+                System.Console.WriteLine(e.Message);
+                  CustomerMain();
+            }
+
         }
         public void FundWallet()
         {
@@ -112,11 +126,11 @@ namespace NewProject.Menu
                         System.Console.WriteLine("Rooms are not available");
                         CustomerMain();
                     }
-                    System.Console.WriteLine($"The Room available is the Number{item.RoomNumbers[item.RoomNumbers.Count-1]} the roomname {item.RoomName} and the quantity {item.Quantity} And the price {item.Price}");
+                    System.Console.WriteLine($"The Room available is the Number{item.RoomNumbers[item.RoomNumbers.Count - 1]} the roomname {item.RoomName} and the quantity {item.Quantity} And the price {item.Price}");
                 }
             }
         }
         // string roomName,int duration,string referenceNo
-        
+
     }
 }

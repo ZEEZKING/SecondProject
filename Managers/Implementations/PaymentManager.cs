@@ -46,6 +46,7 @@ namespace NewProject.Managers.Implementations
                 else
                 {
                     System.Console.WriteLine("Not enough funds");
+                    
                 }
             }
             return null;

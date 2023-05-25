@@ -14,31 +14,46 @@ namespace NewProject.Menu
         IAccountManager _accountManager = new AccountManager();
         public void SuperMain()
         {
+            try
+            {
             System.Console.WriteLine("Enter 1 to register Manager\nEnter 2 to view all Manager\nEnter 3 to check AccountBalance\nEnter 4 to Logout");
             int opt = int.Parse(Console.ReadLine());
-            switch (opt)
-            {
-                case 1:
-                   Register();
-                   SuperMain();
-                    break;
-                case 2:
-                    ViewManagers();
+            
+                switch (opt)
+                {
+                    case 1:
+                        Register();
                         SuperMain();
-                    break;
-                case 3:
-                   CheckBalance();
-                       SuperMain();
-                    break;
-                case 4:
-                    MainMenu mainMenu = new MainMenu();
-                    mainMenu.Main();
-                    break;
-                default:
-                    System.Console.WriteLine("Invalid input");
-                    SuperMain();
-                    break;
+                        break;
+                    case 2:
+                        ViewManagers();
+                        SuperMain();
+                        break;
+                    case 3:
+                        CheckBalance();
+                        SuperMain();
+                        break;
+                    case 4:
+                        MainMenu mainMenu = new MainMenu();
+                        mainMenu.Main();
+                        break;
+                    default:
+                        System.Console.WriteLine("Invalid input");
+                        SuperMain();
+                        break;
+                }
             }
+            catch (NullReferenceException e)
+            {
+                System.Console.WriteLine(e.Message);
+                  SuperMain();
+            }
+            catch(FormatException e)
+            {
+                System.Console.WriteLine(e.Message);
+                  SuperMain();
+            }
+
         }
         public void Register()
         {
@@ -59,7 +74,7 @@ namespace NewProject.Menu
                 Console.WriteLine("wrong input");
                 SuperMain();
             }
-            var manager = _ManagerManager.register(name,email,password,phoneNumber,address,(Gender) gender);
+            var manager = _ManagerManager.register(name, email, password, phoneNumber, address, (Gender)gender);
             if (manager == null)
             {
                 System.Console.WriteLine("Manager wasnt sucessfully created or manager email already exist");
@@ -86,7 +101,7 @@ namespace NewProject.Menu
         }
         public void CheckBalance()
         {
-            Start:
+        Start:
             System.Console.WriteLine("Enter your account Number");
             string acctNum = Console.ReadLine();
 

@@ -17,26 +17,39 @@ namespace NewProject.Menu
         CustomerMenu customerMenu = new CustomerMenu();
         public void Main()
         {
-            System.Console.WriteLine(".......Welcome To CLH Hotel.............");
-            System.Console.WriteLine("Enter 1 to register\nEnter 2 to login");
-            int opt = int.Parse(Console.ReadLine());
-            switch (opt)
+            try
             {
-                case 1:
-                    Register();
-                    break;
-                case 2:
-                   Login();
-                    break;
-                default:
-                    System.Console.WriteLine("Invalid input");
-                    Main();
-                    break;
+                System.Console.WriteLine(".......Welcome To CLH Hotel.............");
+                System.Console.WriteLine("Enter 1 to register\nEnter 2 to login");
+                int opt = int.Parse(Console.ReadLine());
+                switch (opt)
+                {
+                    case 1:
+                        Register();
+                        break;
+                    case 2:
+                        Login();
+                        break;
+                    default:
+                        System.Console.WriteLine("Invalid input");
+                        Main();
+                        break;
+                }
             }
+            catch (NullReferenceException e)
+            {
+                System.Console.WriteLine(e.Message);
+                Main();
+            }
+            catch(FormatException e)
+            {
+                System.Console.WriteLine(e.Message);
+                Main();
+            }
+
 
         }
 
-        // string name, string email, string password, string phoneNumber, string address, Gender gender
         public void Register()
         {
             Console.Write("Enter your FullName : ");
@@ -76,7 +89,7 @@ namespace NewProject.Menu
             Console.Write("Enter your Password : ");
             string password = Console.ReadLine();
 
-            var user = _userManager.Login(email,password);
+            var user = _userManager.Login(email, password);
             if (user == null)
             {
                 System.Console.WriteLine("Invalid Information");
@@ -85,16 +98,16 @@ namespace NewProject.Menu
             else
             {
                 System.Console.WriteLine("You Have login sucessful");
-            
-                if(user.Role == "SuperAdmin")
+
+                if (user.Role == "SuperAdmin")
                 {
                     superAdminMenu.SuperMain();
                 }
-                else if(user.Role == "Manager")
+                else if (user.Role == "Manager")
                 {
                     managerMenu.ManagerMain();
                 }
-                else if(user.Role == "Customer")
+                else if (user.Role == "Customer")
                 {
                     customerMenu.CustomerMain();
                 }

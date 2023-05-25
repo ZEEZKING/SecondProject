@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace NewProject.Models.Entities
 {
-    public class  BaseEntity
+    public abstract class  BaseEntity
     {
         public int Id;
         public bool IsDeleted;

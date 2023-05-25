@@ -45,7 +45,7 @@ namespace NewProject.Menu
 
         public void Booking()
         {
-            
+
             Console.WriteLine("Enter the RoomName you picked");
             string roomName = Console.ReadLine();
             var get = _roomManager.Getby(roomName);
@@ -56,7 +56,7 @@ namespace NewProject.Menu
             }
             System.Console.WriteLine("Enter the Numbers of days you want to lodge");
             int duration = int.Parse(Console.ReadLine());
-               MaKePayment(roomName,duration);
+            MaKePayment(roomName, duration);
 
             var books = _bookingManager.CreateBooking(roomName, duration);
             if (books == null)
@@ -97,6 +97,11 @@ namespace NewProject.Menu
             System.Console.WriteLine($"The amount you are required to pay is {roomg.Price * days}");
             System.Console.Write("Enter the Amount : ");
             double amt = double.Parse(Console.ReadLine());
+            if (amt < roomg.Price * days)
+            {
+                System.Console.WriteLine("amount must be equal t0  required amount");
+                goto Start;
+            }
 
             var payment = _paymentManager.MaKePayment(accountnum, email, amt, roomg.RoomName, days);
             if (payment == null)

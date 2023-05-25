@@ -14,31 +14,45 @@ namespace NewProject.Menu
         IBookingManager _bookingManager = new BookingManager();
         public void ManagerMain()
         {
-            System.Console.WriteLine("Enter 1 to add rooms\nEnter 2 to view all customers\nEnter 3 to view all booking\nEnter 4 to logout");
-            int opt = int.Parse(Console.ReadLine());
-            switch (opt)
+            try
             {
-                case 1:
-                    AddRoom();
-                    ManagerMain();
-                    break;
-                case 2:
-                    ViewCustomers();
-                    ManagerMain();
-                    break;
-                case 3:
-                    ViewBooking();
-                    ManagerMain();
-                    break;
-                case 4:
-                    MainMenu mainMenu = new MainMenu();
-                    mainMenu.Main();
-                    break;
-                default:
-                    System.Console.WriteLine("Invalid input");
-                    ManagerMain();
-                    break;
+                System.Console.WriteLine("Enter 1 to add rooms\nEnter 2 to view all customers\nEnter 3 to view all booking\nEnter 4 to logout");
+                int opt = int.Parse(Console.ReadLine());
+                switch (opt)
+                {
+                    case 1:
+                        AddRoom();
+                        ManagerMain();
+                        break;
+                    case 2:
+                        ViewCustomers();
+                        ManagerMain();
+                        break;
+                    case 3:
+                        ViewBooking();
+                        ManagerMain();
+                        break;
+                    case 4:
+                        MainMenu mainMenu = new MainMenu();
+                        mainMenu.Main();
+                        break;
+                    default:
+                        System.Console.WriteLine("Invalid input");
+                        ManagerMain();
+                        break;
+                }
             }
+            catch (NullReferenceException e)
+            {
+                System.Console.WriteLine(e.Message);
+                  ManagerMain();
+            }
+            catch(FormatException e)
+            {
+                System.Console.WriteLine(e.Message);
+                  ManagerMain();
+            }
+
         }
         // string roomType, int quantity, double price)
         public void AddRoom()
